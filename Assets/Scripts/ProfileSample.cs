@@ -11,6 +11,22 @@ public class ProfileSample : MonoBehaviour
         DoSomething();
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            List<int> listOfInts = new List<int>();
+            const int numTests = 1000000;
+            using(new CustomTimer("Controlled Test", numTests))
+            {
+                for(int i = 0; i < numTests; i++)
+                {
+                    listOfInts.Add(i);
+                }
+            }
+        }
+    }
+
 
     void DoSomething()
     {
