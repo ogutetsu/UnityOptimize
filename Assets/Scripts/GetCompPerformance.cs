@@ -18,6 +18,7 @@ public class GetCompPerformance : MonoBehaviour
             }
         }
 
+        // GetComponent<Name>　これが今のところ一番最速
         using(new CustomTimer("GetComponent<ComponentName>", num))
         {
             for(var i = 0; i < num; i++)
